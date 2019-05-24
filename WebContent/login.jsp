@@ -13,6 +13,7 @@
 	text-align: center;
 	font-family: verdana;
 }
+
 </style>
 </head> 
 <body>
@@ -21,6 +22,7 @@
 	<div class="login">
 		<img src="${pageContext.request.contextPath}/image/person.png"
 			alt="This is me" width="100" height="100">
+		
 		<form action="about.jsp">
 			Username:<br> <input type="text" name="Username" value="">
 			<br> Password<br> <input type="password" name="Password"
