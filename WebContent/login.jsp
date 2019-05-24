@@ -23,11 +23,10 @@
 		<img src="${pageContext.request.contextPath}/image/person.png"
 			alt="This is me" width="100" height="100">
 		
-		<form action="about.jsp">
-			Username:<br> <input type="text" name="Username" value="">
-			<br> Password<br> <input type="password" name="Password"
-				value=""> <br> <br> <input type="submit"
-				value="Submit">
+		<form action="${pageContext.request.contextPath}/Login" method="post">
+			Email<br> <input type="email" name="Email" value=""> <br> 
+			Password<br> <input type="password" name="Password" value=""> <br> 
+			<br> <input type="submit"value="Submit">
 		</form>
 	</div>
 

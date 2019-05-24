@@ -15,7 +15,20 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    public static String email ="";
+    public static String pass = "";
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
 		System.out.println("Servlet : OK");
 		PrintWriter out = response.getWriter();
@@ -32,9 +45,14 @@ public class Register extends HttpServlet {
 		boolean kuy = (request.getParameter("Email")).contains("@");
 		if(kuy==true) {
 			out.println(request.getParameter("Email"));
+			setEmail(request.getParameter("Email"));
+			setPass(request.getParameter("Password"));
+			out.println("Email true is : "+email);
+			response.sendRedirect("login.jsp");
 		}
 		else {
 			out.println("Email error");
+			response.sendRedirect("login.jsp");
 		}
 		out.println("Register Success : "+request.getParameter("Username"));
 		out.println("Register Success : "+request.getParameter("Password"));

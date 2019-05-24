@@ -27,14 +27,30 @@ li a:hover {
 	background-color:Tomato;
 	font-family: verdana;
 }
+
 </style>
 <body style="background-color: hsl(0, 0%, 71%);">
 </body>
 <ul>
-	<li><a href="index.jsp">Home</a></li>
-	<li><a href="login.jsp">Login</a></li>
-	<li><a href="register.jsp">Register</a></li>
-	<li><a href="about.jsp">About</a></li>
+<%
+	if(session.getAttribute("user") != null){
+	%>
+		<li><a href="index.jsp">Home</a></li>
+		<li><a href="Logout">Logout</a></li>
+		<li><a href="profile.jsp">Profile</a></li>
+		<li><a href="about.jsp">About</a></li>
+	<% 
+	}
+	else{
+	%>
+		<li><a href="index.jsp">Home</a></li>
+		<li><a href="login.jsp">Login</a></li>
+		<li><a href="register.jsp">Register</a></li>
+		<li><a href="about.jsp">About</a></li>
+	<% 
+	}
+%>
+	
 	
 
 </ul>

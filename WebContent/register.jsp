@@ -9,12 +9,13 @@
 .register {
 	color: black;
 	margin: auto;
+	padding: 30px;    
 	text-align: center;
 	font-family: verdana;
 	border-style: solid;
 	border-width: 2px;
 	width: 240px;
-	text-align: center;
+	
 }
 
 p {
