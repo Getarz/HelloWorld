@@ -12,7 +12,7 @@
 
 	<jsp:include page="include/header.jsp"></jsp:include>
 	<img src="${pageContext.request.contextPath}/image/Highway Nightt.jpg"
-	alt="This is me">
+	alt="This is me" width="100%">
 
 
 

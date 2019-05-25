@@ -26,7 +26,7 @@ p {
 </head>
 <body>
 	<jsp:include page="include/header.jsp"></jsp:include>
-	<h1 style="font-style: italic; font-family: verdana;">Profile</h1>
+	<h1 style="font-style: italic; font-family: verdana;" >Profile</h1>
 	<hr>
 	
 	<div class="profile">

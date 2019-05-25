@@ -72,16 +72,59 @@ div {
 <body>
 	<jsp:include page="include/header.jsp"></jsp:include>
 	<div class="register">
+	<script type="text/javascript">
+		function  checkinput(){
+			var name = document.getElementById("name");
+			if(name.value==""){
+				document.getElementById("errerms").style.display = "";
+				document.getElementById("errerms").innerHTML = "Please input name";
+				//alert("Please input name");
+				name.focus();
+				return false;
+			}
+			if(lastname.value==""){
+				document.getElementById("errerms").style.display = "";
+				document.getElementById("errerms").innerHTML = "Please input lastname";
+				//alert("Please input lastname");
+				lastname.focus();
+				return false;
+			}
+			if(email.value==""){
+				document.getElementById("errerms").style.display = "";
+				document.getElementById("errerms").innerHTML = "Please input email";
+				//alert("Please input email");
+				email.focus();
+				return false;
+			}
+			if(password.value==""){
+				document.getElementById("errerms").style.display = "";
+				document.getElementById("errerms").innerHTML = "Please input password";
+				//alert("Please input password");
+				password.focus();
+				
+				return false;
+			}
+			if(username.value==""){
+				document.getElementById("errerms").style.display = "";
+				document.getElementById("errerms").innerHTML = "Please input username";
+				//alert("Please input username");
+				username.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
 		<img src="${pageContext.request.contextPath}/image/person.png"
 			alt="This is me" width="100" height="100">
 			
 		<p>>>Register<<</p>
-		<form action="${pageContext.request.contextPath}/Register" method="post">
-			First name<br> <input type="text" name="Firstname" value=""> <br> 
-			Last name<br> <input type="text" name="Lastname" value=""> <br> 
-			Email<br> <input type="email" name="Email" value=""> <br> 
-			Username<br> <input type="text" name="Username" value=""> <br> 
-			Password<br> <input type="password" name="Password" value=""> <br> <br>
+		<p id="errerms" style="display: none; color: red" ></p>
+		<form onsubmit="return checkinput()" action="${pageContext.request.contextPath}/Register" method="post">
+			First name<br> <input type="text" id="name" name="Firstname" value=""> <br> 
+			Last name<br> <input type="text" id="lastname" name="Lastname" value=""> <br> 
+			Email<br> <input type="email" id="email" name="Email" value=""> <br> 
+			Username<br> <input type="text" id="username" name="Username" value=""> <br> 
+			Password<br> <input type="password" id="password" name="Password" value=""> <br> <br>
 			<input type="submit" value="Submit">  <input type="reset"
 				value="Reset">
 		</form>

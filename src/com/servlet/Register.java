@@ -17,6 +17,10 @@ public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public static String email ="";
     public static String pass = "";
+    public static String name ="";
+    public static String lastname = "";
+    public static String username = "";
+    
 	public String getEmail() {
 		return email;
 	}
@@ -47,6 +51,9 @@ public class Register extends HttpServlet {
 			out.println(request.getParameter("Email"));
 			setEmail(request.getParameter("Email"));
 			setPass(request.getParameter("Password"));
+			name = request.getParameter("Firstname");
+			lastname = request.getParameter("Lastname");
+			username = request.getParameter("Username");
 			out.println("Email true is : "+email);
 			response.sendRedirect("login.jsp");
 		}

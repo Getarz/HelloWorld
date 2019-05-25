@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
 		if(request.getParameter("Email").equalsIgnoreCase(Register.email)&&request.getParameter("Password").equalsIgnoreCase(Register.pass)) {
 			
 			//set session
-			UserModel user = new UserModel("gui", "tar", request.getParameter("Email"), request.getParameter("Password"), "040404");
+			UserModel user = new UserModel(Register.name, Register.lastname, request.getParameter("Email"), request.getParameter("Password"), "040404");
 			session.setAttribute("user", user);
 			response.sendRedirect("index.jsp");
 		}

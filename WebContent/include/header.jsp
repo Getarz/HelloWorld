@@ -1,58 +1,75 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<head>
+<link rel = "stylesheet" href = "bootstrap-4.3.1-dist/css/bootstrap.css">
+<script type="text/javascript" src = "bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+</head>
 <style>
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333333;
-}
-
-li {
-	float: left;
-}
-
-li a {
-	font-family: verdana;
-	display: block;
+a {
 	color: white;
-	text-align: center;
-	padding: 16px;
-	text-decoration: none;
-}
-
-li a:hover {
-	background-color:Tomato;
-	font-family: verdana;
 }
 
 </style>
 <body style="background-color: hsl(0, 0%, 71%);">
 </body>
-<ul>
-<%
+
+
+
+	 <%
 	if(session.getAttribute("user") != null){
 	%>
-		<li><a href="index.jsp">Home</a></li>
-		<li><a href="Logout">Logout</a></li>
-		<li><a href="profile.jsp">Profile</a></li>
-		<li><a href="about.jsp">About</a></li>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+		  <a class="navbar-brand mb-0 h1" href="index.jsp" >Home</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="profile.jsp">Profile</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link about" href="calculater.jsp" tabindex="-1" aria-disabled="true">Calculater</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link about" href="about.jsp" tabindex="-1" aria-disabled="true">About</a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  formaction="${pageContext.request.contextPath}/Logout">Logout</button>
+		    </form>
+		  </div>
+		</nav>
 	<% 
 	}
 	else{
 	%>
-		<li><a href="index.jsp">Home</a></li>
-		<li><a href="login.jsp">Login</a></li>
-		<li><a href="register.jsp">Register</a></li>
-		<li><a href="about.jsp">About</a></li>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand mb-0 h1" href="index.jsp">Home</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="register.jsp" >Register</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link about" href="about.jsp" tabindex="-1" aria-disabled="true">About</a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  formaction="login.jsp">Login</button>
+		    </form>
+		  </div>
+		</nav>
 	<% 
 	}
 %>
-	
-	
 
-</ul>
 <br>
 
