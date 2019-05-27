@@ -11,9 +11,10 @@
 <body style="background-color: hsl(0, 0%, 71%);">
 
 	<jsp:include page="include/header.jsp"></jsp:include>
+	
 	<img src="${pageContext.request.contextPath}/image/Highway Nightt.jpg"
 	alt="This is me" width="100%">
-
+	
 
 
 </body>

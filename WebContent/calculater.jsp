@@ -36,7 +36,7 @@ input[type=button] {
 </head>
 <body>
 	<jsp:include page="include/header.jsp"></jsp:include>
-	<h1 style="font-style: italic; font-family: verdana;" text-shadow: 2px 2px 5pxred;>Calculater</h1>
+	<h1 style="font-style: italic; font-family: verdana; margin: 15px;" text-shadow: 2px 2px 5pxred;>Calculater</h1>
 	<hr>
 	<script type="text/javascript">
 	function  myFunction(ms) {
@@ -75,5 +75,6 @@ input[type=button] {
 			<input type="text" id="result"  color: black;">
 		</center>
 	</form>
+	
 </body>
 </html>
